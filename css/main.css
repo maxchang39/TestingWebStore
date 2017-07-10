@@ -1,0 +1,147 @@
+ul li {
+	list-style-type: none;
+}
+
+[v-cloak] {
+	display: none
+}
+
+#main {
+	font: 14px arial, sans-serif;
+}
+
+#top {
+	min-height: auto;
+	background: lightblue;
+}
+
+.main-button {
+	background-color: #8C8C8C;
+	border: 2px solid #aaa;
+	color: #f6f6f6;
+	padding: 3px 5px 3px 5px;
+	user-select: none;
+}
+
+.main-button:hover {
+	background-color: #f6f6f6;
+	color: black;
+	cursor: pointer;
+}
+
+#top p {
+	display: inline-block;
+	padding-top: 8px;
+	padding-left: 6px;
+	color: white;
+	font-size: 16px;
+}
+
+#left {
+	position: absolute;
+	left: 100px;
+	background-color: #F6F6F6;
+	width: 200px;
+	height: 600px;
+}
+
+#left .main-button {
+	font-size: 18px;
+	height: 38px;
+	padding-top: 8px;
+	margin-bottom: 8px;
+}
+
+#new-item-dialog {
+	background-color: #f6f6f6;
+	width: 500px;
+	text-align: center;
+	border: 2px solid #aaa;
+	margin: 0 auto;
+}
+
+#new-item-dialog div {
+	height: 50px;
+	padding-top: 12px;
+	position: relative;
+}
+
+#new-item-dialog #description {
+	height: 80px;
+	padding-top: 12px;
+}
+
+#new-item-dialog #title {
+	font-size: 16px;
+}
+
+#new-item-dialog p {
+	vertical-align: top;
+}
+
+#new-item-dialog div * {
+	display: inline;
+}
+
+#new-item-dialog input {
+	height: 20px;
+}
+
+#new-item-dialog #uploader {
+	position: absolute;
+	left: 50%;
+	width: 50px;
+	opacity: 0;
+	display: none;
+}
+
+#new-item-dialog .uploadedImage {
+	max-height: 80px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+#new-item-dialog #images {
+	height: auto;
+}
+
+#item-list-dialog {
+	background-color: #f6f6f6;
+	width: 500px;
+	text-align: center;
+	border: 2px solid #aaa;
+	margin: 0 auto;
+}
+
+#item-list-dialog div {
+	height: ;
+	padding-top: 12px;
+	padding-left: 5px;
+	text-align: left;
+}
+
+#item-list-dialog .stored-items {
+	width: 100%;
+	display: inline-table;
+}
+
+#item-list-dialog .stored-items .product-name {
+	min-width: 80px;
+	display: inline-block;
+}
+
+#item-list-dialog .stored-items .product-description {
+	min-width: 200px;
+	display: inline-block;
+}
+
+#item-list-dialog .stored-items .product-images {
+	min-width: 200px;
+	display: inline-block;
+}
+
+#item-list-dialog .uploadedImage {
+	max-height: 80px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}

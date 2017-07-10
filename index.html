@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" style="text/css" />
+		<link href="css/main.css" rel="stylesheet" style="text/css" />
+		<script src="js/lib/require.js" data-main="js/main"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="top" class="navbar">
+				<p>Max's Test shop</p>
+			</div>
+			<div id="left">
+				<p @click="openMenu(1)" class="main-button">+ new item</p>
+				<p @click="openMenu(2)" class="main-button">+ item list</p>
+			</div>
+			<div class="container-fluid">
+				<div id="new-item-dialog" v-show="isShow">
+					<div id="title">
+						Please enter the product details.
+					</div>
+					<div>
+						<p>Product Name </p>
+						<input type="text" v-model="product_name" />
+					</div>
+					<div id="description">
+						<p>Description </p>
+						<textarea rows="3" cols="30" v-model="product_description"></textarea>
+					</div>
+					<div>
+						<p>Image</p>
+						<p @click="uploadImage" class="main-button">Upload</p>
+						<input id="uploader" type="file" @change="onFileChange">
+					</div>
+					<div id="images">
+						<div v-if="images.length >0">
+							<ul>
+								<li v-for="image in images">
+									<img class="uploadedImage" :src="image" @click='delImage($index)' />
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<p @click="submit" class="main-button">Submit</p>
+					</div>
+				</div>
+				<div id="item-list-dialog" v-show="!isShow" v-cloak>
+					<div v-if="products.length >0" class="stored-items" v-for="product in products">
+						<p class="product-name">{{product.name}}</p>
+						<p class="product-description">{{product.description}}</p>
+						<div class="product-images" v-if="product.images.length >0">
+							<ul>
+								<li v-for="image in product.images">
+									<img class="uploadedImage" :src="image"/>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
